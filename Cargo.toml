@@ -1,7 +1,6 @@
 [workspace]
 members = [
-  "some_other_crate",
-  "adder_backend"
+  "py-adder"
 ]
 
 [workspace.dependencies.backend]
