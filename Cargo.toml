@@ -1,0 +1,10 @@
+[workspace]
+members = [
+  "some_other_crate",
+  "adder_backend"
+]
+
+[workspace.dependencies.backend]
+package = "adder_backend"
+version = "0.1.0"
+path = "adder_backend"

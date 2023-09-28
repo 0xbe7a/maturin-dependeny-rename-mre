@@ -1,0 +1,22 @@
+[package]
+name = "adder"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "adder"
+# "cdylib" is necessary to produce a shared library for Python to import from.
+crate-type = ["cdylib"]
+
+[dependencies]
+some_other_crate = { path = "../some_other_crate" }
+
+
+[dependencies.pyo3]
+version = "0.18.0"
+features = ["abi3-py37"]
+
+# Prevent package from thinking it's in the workspace
+[workspace]
